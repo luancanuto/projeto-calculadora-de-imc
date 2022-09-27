@@ -46,7 +46,7 @@ const calcBtn = document.querySelector("#calc-btn");
 const clearBtn = document.querySelector("#clear-btn");
 
 const calcContainer = document.querySelector("#calc-container");
-const resultContainer = document.querySelector("#resul-container");
+const resultContainer = document.querySelector("#result-container");
 
 const imcNumber = document.querySelector("#imc-number span");
 const imcInfo = document.querySelector("#imc-info span");
@@ -78,7 +78,7 @@ function createTable(data) {
 }
 
 function validDigits(text) {
-    return text.replace(/[^0-9,]/g, "")
+    return text.replace(/[^0-9,]/g, "");
 }
 
 function showOrHideResults() {
@@ -87,7 +87,7 @@ function showOrHideResults() {
   }
 
 function calcImc(weight, height) {
-    const imc = weight / (height * height).toFixed(1);
+    const imc = (weight / (height * height)).toFixed(1);
     return imc;
 }
 
@@ -105,6 +105,7 @@ createTable(data);
 // Eventos
 [heightInput, weightInput].forEach((el) => {
     el.addEventListener("input", (e) => {
+
         const updatedValue = validDigits(e.target.value);
         e.target.value = updatedValue;
     });
