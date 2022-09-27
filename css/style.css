@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #090e22;
+    background-image: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,8 @@ body {
 .container {
     min-width: 400px;
     min-height: 400px;
-    background-color: #1d1e33;
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+    border-radius: 12px;
     padding: 2rem;
 }
 
